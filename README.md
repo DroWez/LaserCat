@@ -21,14 +21,16 @@
 - **Версия 1.1**: Изменен дизайн и программа адаптирована на новые версии прошивок.
 - **Версия 1.0**: Первая версия программы.
 
-<div style="display: flex;">
-        <img src="https://github.com/DroWez/LaserCat/blob/main/img_readme/donetecat.jpg?raw=true" style="width: 200px; height: auto;">
-        <div>
-            <p><b>TON:</b> UQDC-gE4rtld1Vh5mhLMhFuzryB9-Ao8LMslLuuH09n7GmH5</p>
+<table border="0">
+        <tr>
+            <td><img src="https://github.com/DroWez/LaserCat/blob/main/img_readme/donetecat.jpg?raw=true" alt="Описание картинки" width="200"></td>
+            <td>
+        <p><b>TON:</b> UQDC-gE4rtld1Vh5mhLMhFuzryB9-Ao8LMslLuuH09n7GmH5</p>
             <p><p><b>BTC:</b> 18W7s6tpueW9k7T1hobnGTq8PAoFFijnTf</p></p>
 
-        </div>
-    </div>
+            </td>
+        </tr>
+    </table>
 
 ---------------------------
 
@@ -54,14 +56,17 @@ I hope you can figure out the compilation process on your own. In the future, I 
 - **Version 1.1**: Design updated and program adapted for new firmware versions.
 - **Version 1.0**: Initial release.
 
-<div style="display: flex;">
-        <img src="https://github.com/DroWez/LaserCat/blob/main/img_readme/donetecat.jpg?raw=true" style="width: 200px; height: auto;">
-        <div>
-            <p><b>TON:</b> UQDC-gE4rtld1Vh5mhLMhFuzryB9-Ao8LMslLuuH09n7GmH5</p>
+<table border="0">
+        <tr>
+            <td><img src="https://github.com/DroWez/LaserCat/blob/main/img_readme/donetecat.jpg?raw=true" alt="Описание картинки" width="200"></td>
+            <td>
+        <p><b>TON:</b> UQDC-gE4rtld1Vh5mhLMhFuzryB9-Ao8LMslLuuH09n7GmH5</p>
             <p><p><b>BTC:</b> 18W7s6tpueW9k7T1hobnGTq8PAoFFijnTf</p></p>
 
-        </div>
-    </div>
+            </td>
+        </tr>
+    </table>
+
 
 ---------------------------
 <h1 align="center"><img src="https://github.com/DroWez/LaserCat/blob/main/img_readme/foto.jpg?raw=true" width="50%"></h1>
