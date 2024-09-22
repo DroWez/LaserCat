@@ -11,8 +11,10 @@
 Надеюсь, вы разберетесь с компиляцией самостоятельно. В будущем, возможно, я выложу релизы для популярных прошивок F0.
 
 ## Схема сборки лазера
-
-<h1 align="center"><img src="https://github.com/DroWez/LaserCat/blob/main/img_readme/shema.jpg?raw=true" width="50%"></h1>
+<p align="center">Лазер 5 вольт</p>
+<h1 align="center"><img src="https://github.com/DroWez/LaserCat/blob/main/img_readme/5v.jpg?raw=true" width="50%"></h1>
+<p align="center">Лазер 3.3 вольта</p>
+<h1 align="center"><img src="https://github.com/DroWez/LaserCat/blob/main/img_readme/3v.jpg?raw=true" width="50%"></h1>
 
 ## Изменения в программе
 
@@ -37,7 +39,10 @@ I hope you can figure out the compilation process on your own. In the future, I 
 
 ## Laser Assembly Diagram
 
-<h1 align="center"><img src="https://github.com/DroWez/LaserCat/blob/main/img_readme/shema.jpg?raw=true" width="50%"></h1>
+<p align="center">Laser 5 volt</p>
+<h1 align="center"><img src="https://github.com/DroWez/LaserCat/blob/main/img_readme/5v.jpg?raw=true" width="50%"></h1>
+<p align="center">Laser 3.3 volt</p>
+<h1 align="center"><img src="https://github.com/DroWez/LaserCat/blob/main/img_readme/3v.jpg?raw=true" width="50%"></h1>
 
 ## Program Changes
 
