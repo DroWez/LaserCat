@@ -27,6 +27,7 @@
             <td>
         <p><b>TON:</b> UQDC-gE4rtld1Vh5mhLMhFuzryB9-Ao8LMslLuuH09n7GmH5</p>
             <p><b>BTC:</b> 18W7s6tpueW9k7T1hobnGTq8PAoFFijnTf</p>
+            <p><a href="https://yoomoney.ru/to/410012458524003">Перевод</a></p>        
             </td>
         </tr>
     </table>
