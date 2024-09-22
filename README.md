@@ -25,8 +25,7 @@
 TON: UQDC-gE4rtld1Vh5mhLMhFuzryB9-Ao8LMslLuuH09n7GmH5
 
 ---------------------------
-<h1 align="center">LaserCat</h1>
-<h1 align="center"><img src="https://github.com/DroWez/LaserCat/blob/main/img_readme/catinfo2.jpg?raw=true" width="50%"></h1>
+
 Hello everyone! I'm excited to present my first application for **Flipper Zero**. Everyone has to start somewhere, and I decided to begin with a simple yet fun project — a laser for your cat. This application activates a laser so your pet can have a great time.
 
 ## Application Screenshots
