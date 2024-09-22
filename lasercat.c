@@ -1,4 +1,3 @@
-
 //подключаем модули
 #include <stdio.h>
 #include <furi.h>
@@ -13,6 +12,7 @@
 char* currentKeyPressed;
 int BUFFER = 10;
 bool keyonoff = false;
+
 // Эта функция предназначена для рисования графического интерфейса экрана каждый раз, когда
 // flip обновляет дисплей
 static void draw_callback(Canvas* canvas, void* ctx) {
@@ -22,28 +22,38 @@ static void draw_callback(Canvas* canvas, void* ctx) {
 
     // Код с lopaka.app
     canvas_set_bitmap_mode(canvas, true);
-    canvas_draw_icon(canvas, 0, 0, &I_cat);
     canvas_set_font(canvas, FontPrimary);
-    canvas_draw_str(canvas, 58, 12, "LaserCat");
+    canvas_draw_str(canvas, 69, 12, "LaserCat");
     canvas_set_font(canvas, FontKeyboard);
-    canvas_draw_str(canvas, 67, 26, "Touch");
+    canvas_draw_str(canvas, 60, 30, "Click");
     canvas_draw_str(canvas, 60, 38, "");
-    canvas_draw_icon(canvas, 75, 29, &I_Ok_btn_pressed);
+    canvas_draw_icon(canvas, -11, 0, &I_cat);
     canvas_set_font(canvas, FontPrimary);
-    canvas_draw_str(canvas, 53, 56, currentKeyPressed); // изменяемая перемнная
+    canvas_draw_str(canvas, 62, 45, currentKeyPressed);
+    canvas_draw_line(canvas, 59, 15, 127, 15);
+    canvas_draw_line(canvas, 60, 47, 127, 47);
+    canvas_set_font(canvas, FontSecondary);
+    canvas_draw_str(canvas, 110, 30, "to");
+    canvas_draw_str(canvas, 37, 60, "GitHub.com/DroWez");
+    canvas_draw_frame(canvas, 35, 50, 92, 13);
+    if(keyonoff == true) {
+        canvas_draw_icon(canvas, 44, 0, &I_lamp_on);
+    } else {
+        canvas_draw_icon(canvas, 44, 0, &I_lamp_off);
+    }
+    canvas_draw_icon(canvas, 93, 20, &I_Ok_btn_pressed);
 }
 
 // (*2) Здесь мы можем определить обратный вызов для таймера: каждые 2 секунды
 // система furi-timer будет вызывать наш определенный обратный вызов
-static void timer_callback(FuriMessageQueue* event_queue) {
+static void timer_callback(void* context) {
+    FuriMessageQueue* event_queue = (FuriMessageQueue*)context;
     furi_assert(event_queue);
     if(keyonoff == true) {
-        currentKeyPressed = "Laser > ON";
-        furi_hal_gpio_write(&gpio_ext_pc3, true);
-    }
-
-    if(keyonoff == false) {
         currentKeyPressed = "Laser > OFF";
+        furi_hal_gpio_write(&gpio_ext_pc3, true);
+    } else {
+        currentKeyPressed = "Laser > ON";
         furi_hal_gpio_write(&gpio_ext_pc3, false);
     }
 }
@@ -57,7 +67,6 @@ static void input_callback(InputEvent* input_event, void* ctx) {
 }
 
 // Основная запись приложения, как определено внутри application.fam
-
 int32_t main_fap(void* p) {
     UNUSED(p);
     // Инициализация (*1)
@@ -71,8 +80,7 @@ int32_t main_fap(void* p) {
     // конец
     //отключим порт при запуске
     furi_hal_gpio_write(&gpio_ext_pc3, false);
-    //напишем что отключен
-    currentKeyPressed = "Laser > OFF";
+
     // Текущее событие типа InputEvent
     InputEvent event;
 
@@ -96,24 +104,21 @@ int32_t main_fap(void* p) {
 
     // Создает furi-таймер и связывает соответствующий обратный вызов, определенный в (*2)
     FuriTimer* timer = furi_timer_alloc(timer_callback, FuriTimerTypePeriodic, event_queue);
-    // Запускает таймер - время истечения в миллисекундах (в данном случае 2 секунды)
+    // Запускает таймер - время истечения в миллисекундах (в данном случае 0.5 секунды)
     furi_timer_start(timer, 500);
     //проверем И подключаем GPO
     furi_hal_gpio_write(&gpio_ext_pc3, false);
     furi_hal_gpio_init(&gpio_ext_pc3, GpioModeOutputPushPull, GpioPullNo, GpioSpeedVeryHigh);
     // Бесконечный цикл... (как у arduino)
-    // uint8_t attempts = 0; //нужно на 5 вольт
     while(1) {
         // Продолжаем (бесконечно) выводить из очереди все события, накопленные внутри
         furi_check(furi_message_queue_get(event_queue, &event, FuriWaitForever) == FuriStatusOk);
 
         // Если событием из очереди является нажатие кнопки кнопок и запись значений currentKeyPressed, мы выходим из цикла
-
         if(event.key == InputKeyOk) {
             if(keyonoff == true) {
                 currentKeyPressed = "Laser > OFF";
                 keyonoff = false;
-
             } else {
                 currentKeyPressed = "Laser > ON";
                 keyonoff = true;
