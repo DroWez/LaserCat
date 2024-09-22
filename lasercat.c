@@ -28,8 +28,8 @@ static void draw_callback(Canvas* canvas, void* ctx) {
     canvas_draw_str(canvas, 60, 30, "Click");
     canvas_draw_str(canvas, 60, 38, "");
     canvas_draw_icon(canvas, -11, 0, &I_cat);
-    canvas_set_font(canvas, FontPrimary);
-    canvas_draw_str(canvas, 62, 45, currentKeyPressed);
+    canvas_set_font(canvas, FontSecondary);
+    canvas_draw_str(canvas, 65, 43, currentKeyPressed);
     canvas_draw_line(canvas, 59, 15, 127, 15);
     canvas_draw_line(canvas, 60, 47, 127, 47);
     canvas_set_font(canvas, FontSecondary);
@@ -50,10 +50,10 @@ static void timer_callback(void* context) {
     FuriMessageQueue* event_queue = (FuriMessageQueue*)context;
     furi_assert(event_queue);
     if(keyonoff == true) {
-        currentKeyPressed = "Laser > OFF";
+        currentKeyPressed = "turn off laser ";
         furi_hal_gpio_write(&gpio_ext_pc3, true);
     } else {
-        currentKeyPressed = "Laser > ON";
+        currentKeyPressed = "turn on laser ";
         furi_hal_gpio_write(&gpio_ext_pc3, false);
     }
 }
@@ -117,10 +117,10 @@ int32_t main_fap(void* p) {
         // Если событием из очереди является нажатие кнопки кнопок и запись значений currentKeyPressed, мы выходим из цикла
         if(event.key == InputKeyOk) {
             if(keyonoff == true) {
-                currentKeyPressed = "Laser > OFF";
+                currentKeyPressed = "turn on laser ";
                 keyonoff = false;
             } else {
-                currentKeyPressed = "Laser > ON";
+                currentKeyPressed = "turn off laser ";
                 keyonoff = true;
             }
         }
