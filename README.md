@@ -26,11 +26,11 @@
             <td><img src="https://github.com/DroWez/LaserCat/blob/main/img_readme/donetecat.jpg?raw=true" alt="Описание картинки" width="200"></td>
             <td>
         <p><b>TON:</b> UQDC-gE4rtld1Vh5mhLMhFuzryB9-Ao8LMslLuuH09n7GmH5</p>
-            <p><p><b>BTC:</b> 18W7s6tpueW9k7T1hobnGTq8PAoFFijnTf</p></p>
-
+            <p><b>BTC:</b> 18W7s6tpueW9k7T1hobnGTq8PAoFFijnTf</p>
             </td>
         </tr>
     </table>
+
 
 ---------------------------
 
@@ -60,8 +60,8 @@ I hope you can figure out the compilation process on your own. In the future, I 
         <tr>
             <td><img src="https://github.com/DroWez/LaserCat/blob/main/img_readme/donetecat.jpg?raw=true" alt="Описание картинки" width="200"></td>
             <td>
-        <p><b>TON:</b> UQDC-gE4rtld1Vh5mhLMhFuzryB9-Ao8LMslLuuH09n7GmH5</p>
-            <p><p><b>BTC:</b> 18W7s6tpueW9k7T1hobnGTq8PAoFFijnTf</p></p>
+       <b>TON:</b> UQDC-gE4rtld1Vh5mhLMhFuzryB9-Ao8LMslLuuH09n7GmH5</p>
+            <p><b>BTC:</b> 18W7s6tpueW9k7T1hobnGTq8PAoFFijnTf</p>
 
             </td>
         </tr>
