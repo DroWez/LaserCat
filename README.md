@@ -1,7 +1,7 @@
 
 
 <h1 align="center">LaserCat</h1>
-
+<h1 align="center"><img src="https://github.com/DroWez/LaserCat/blob/main/img_readme/catinfo.png?raw=true" width="100%"></h1>
 
 Привет народ! Это мое первое приложение для Flipper Zero.   Надо с чего-то начинать писать вот и решить написать лазер для кошки довольно простое приложение которое зажигает лазер. 
 
