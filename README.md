@@ -17,7 +17,7 @@
 <h1 align="center"><img src="https://github.com/DroWez/LaserCat/blob/main/img_readme/3v.jpg?raw=true" width="60%"></h1>
 
 ## Изменения в программе
-
+- **Версия 1.2**: Изменен дизайн и добавлена функция включать лазер по нажатию кнопки влево.
 - **Версия 1.1**: Изменен дизайн и программа адаптирована на новые версии прошивок.
 - **Версия 1.0**: Первая версия программы.
 
@@ -53,7 +53,7 @@ I hope you can figure out the compilation process on your own. In the future, I 
 <h1 align="center"><img src="https://github.com/DroWez/LaserCat/blob/main/img_readme/3v.jpg?raw=true" width="60%"></h1>
 
 ## Program Changes
-
+- **Version 1.2**: The design has been changed, and a feature has been added to activate the laser by pressing the left button.
 - **Version 1.1**: Design updated and program adapted for new firmware versions.
 - **Version 1.0**: Initial release.
 
